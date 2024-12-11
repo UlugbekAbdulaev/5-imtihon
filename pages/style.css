@@ -1,0 +1,107 @@
+#container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+#container2 {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+body {
+    font-family: urbanist, sans-serif;
+}
+
+nav {
+    border-bottom: 1px solid #262626;
+}
+
+.items_ {
+    border: 1px solid #262626;
+}
+
+.hra {
+    width: 2px;
+    height: 100px;
+    border: 1px solid white;
+    background-color: white;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#lightning {
+    font-size: 30px;
+    display: inline-block;
+    animation: move 300ms infinite;
+    padding-top: 25px;
+}
+
+
+@media (max-width: 1023px) {
+    #dumoloq {
+        display: none;
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+    #dumoloq:first-of-type {
+        width: 200px;
+        height: 200px;
+    }
+
+    #dumoloq:last-of-type {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+
+@media (max-width: 767px) {
+
+    #section {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    #addTOcard{
+        width: 400px;
+        height: 400px;
+        margin-top: 100px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #addTOcard{
+        width: 500px;
+        height: 400px;
+        margin-top: 100px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    #section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
