@@ -5,9 +5,7 @@ async function getAllProduct() {
     let res = await fetch('https://fakestoreapi.com/products', {
         method: "GET"
     });
-
     res = await res.json()
-
     printproduct(res)
 }
 getAllProduct()
@@ -26,7 +24,7 @@ function printproduct(products) {
         let span1 = document.createElement("div")
         span1.classList.add("col-span-1", "p-2", "border", "mt-10", "rounded-lg", "border-[gray]")
         let image = document.createElement("img")
-        image.classList.add("w-full", "h-[280px]")
+        image.classList.add("w-full", "md:h-[280px]" , "h-[180px]")
         image.src = item.image
         image.alt = item.title
         let title = document.createElement("p")
@@ -112,7 +110,7 @@ async function catogoryId(category) {
 
 let addTOcard = () => {
     addtocard.classList.toggle("translate-x-[-600px]")
-    // console.log(addtocard);   
+   
 }
 
 let x = () => {
@@ -201,8 +199,6 @@ rendStor()
 
 
 
-
-
 function increment(id){
     let prod_find = savat.find((item)=>{
         
@@ -240,8 +236,13 @@ function remove_delete(id){
     })
     
     savat.splice(index, 1)
+
     rendStor(savat)
+    sup.textContent = savat.length
     addPrice()
+    if(savat.length == 0){
+        addtocard.classList.remove("translate-x-[-600px]")
+    } 
 }
 
 
@@ -260,3 +261,12 @@ function addPrice(){
  
     
 }
+
+
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+  mobileMenu.classList.toggle("flex");
+});
