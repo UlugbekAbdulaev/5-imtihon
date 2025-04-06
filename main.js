@@ -25,11 +25,12 @@ function photoChangeToRasm3() {
 
 
 
-const menuToggle = document.getElementById('menuToggle');
-const mobileMenu = document.getElementById('mobileMenu');
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
 
-menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open');
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+  mobileMenu.classList.toggle("flex");
 });
 
 

@@ -1,0 +1,24 @@
+{
+  "name": "5-oy-imtixin-vazifasi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UlugbekAbdulaev/5-imtihon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/UlugbekAbdulaev/5-imtihon/issues"
+  },
+  "homepage": "https://github.com/UlugbekAbdulaev/5-imtihon#readme"
+ 
+  
+}
