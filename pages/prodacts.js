@@ -16,21 +16,21 @@ function printproduct(products) {
     section.innerHTML = "";
     products.forEach(item => {
         let span1 = document.createElement("div");
-        span1.classList.add("col-span-1", "p-2", "border", "mt-10", "rounded-lg", "border-[gray]");
+        span1.classList.add("col-span-1", "p-2", "border",  "rounded-lg", "border-[gray]");
         let image = document.createElement("img");
-        image.classList.add("w-full", "md:h-[280px]", "h-[180px]");
+        image.classList.add("md:w-full", "md:h-[280px]", "h-[200px]", "w-[250px]", "ml-[40px]" , "md:ml-[0px]");
         image.src = item.image;
         image.alt = item.title;
         let title = document.createElement("p");
-        title.classList.add("text-white", "pb-10");
+        title.classList.add("text-white", "md:pb-10");
         title.textContent = item.title;
         let newDiv = document.createElement("div");
         newDiv.classList.add("flex", "justify-between", "items-center");
         let prise = document.createElement("span");
-        prise.classList.add("text-white");
+        prise.classList.add("text-green-500" , "font-bold");
         prise.textContent = item.price + " $";
         let btn = document.createElement("button");
-        btn.classList.add("bg-[blue]", "p-3", "text-white", "rounded-lg");
+        btn.classList.add("bg-[blue]", "p-1", "text-white", "rounded-lg", "md:p-3");
         btn.textContent = "Add To Cart";
 
         btn.setAttribute("onclick", `addstore(${item.id})`);
@@ -73,11 +73,11 @@ async function getcategories() {
 getcategories();
 
 function rendcate(categories) {
-    // All tugmasini qo'shish
+    
     let btn_all = document.createElement('button');
     btn_all.classList.add("border", "p-4", "rounded-lg", "active:bg-blue-500");
     btn_all.textContent = "All";
-    btn_all.addEventListener('click', getAllProduct); // All tugmasi bosilganda barcha maxsulotlarni olish
+    btn_all.addEventListener('click', getAllProduct); 
     categoriesDiv.appendChild(btn_all);
 
     categories?.forEach((coteg) => {
